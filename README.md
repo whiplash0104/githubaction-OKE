@@ -157,11 +157,11 @@ La finalidad de este demo es configurar Github Actions para realizar deploymente
 11. Crear Secret de tipo docker-registry para el namespace
 	Para crear el secret es necesario conocer el identificador del registry (XXX.ocir.io), para ello visitar https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm y buscar **el key de la región** en la que uno se encuentrá, por ejemplo Sao Paulo gru, Chile scl, Ashbur iad. 
 	**en el caso de Ashburn usar iad, en el caso de Sao Paulo gru** 
-	**TENANCI_XXXXX es el dato almacenado en ~/.oci/namespaceRegistry**
+	**NAMESPACE_XXXXX es el dato almacenado en ~/.oci/namespaceRegistry**
 	**USERNAME_XXXXX es el nombre dle usuario completo, en mi caso oracleidentitycloudservice/felipe.basso@oracle.com**
 	**TOKEN_XXXX es ~/.oci/token**
 	```
-	$ kubectl create secret docker-registry ocirsecret --docker-server=XXX.ocir.io --docker-username='TENANCI_XXXXX/USERNAME_XXXXX' --docker-password='TOKEN_XXXX' -n demo
+	$ kubectl create secret docker-registry ocirsecret --docker-server=XXX.ocir.io --docker-username='NAMESPACE_XXXXX/USERNAME_XXXXX' --docker-password='TOKEN_XXXX' -n demo
 	```
 	**Ejemplo**
 	```
